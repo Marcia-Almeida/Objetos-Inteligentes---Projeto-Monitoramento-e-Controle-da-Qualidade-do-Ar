@@ -1,9 +1,9 @@
 # Objetos-Inteligentes---Projeto-Monitoramento-e-Controle-da-Qualidade-do-Ar
 Este projeto desenvolve um sistema de Internet das Coisas (IoT) para monitorar a qualidade do ar em ambientes internos, alinhado ao ODS 3 da ONU (Boa Saúde e Bem-Estar), utilizando o protocolo MQTT para comunicação.
 
-# 😷 Monitoramento e Controle da Qualidade do Ar em Ambientes Internos com IoT
+#  Monitoramento e Controle da Qualidade do Ar em Ambientes Internos com IoT
 
-## 🎯 Introdução e Objetivo
+##  Introdução e Objetivo
 
 Este projeto de Objetos Inteligentes Conectados desenvolve um sistema de Internet das Coisas (IoT) para monitorar e controlar a qualidade do ar, alinhado ao **Objetivo de Desenvolvimento Sustentável (ODS) 3 da ONU** (Boa Saúde e Bem-Estar).
 
@@ -24,7 +24,7 @@ A comunicação entre o ESP32 (Simulação) e o Node-RED (Dashboard) ocorre via 
 * **Tópico de Dados:** `qualidadear/dados` (Publicação do valor de poluentes pelo ESP32).
 * **Tópico de Controle:** `qualidadear/controle` (Comando Ligar/Desligar enviado pelo Node-RED).
 
-## 🗃️ Arquivos do Projeto (A Serem Inseridos)
+##  Arquivos do Projeto (A Serem Inseridos)
 
 Esta seção será preenchida após a conclusão das etapas técnicas.
 
