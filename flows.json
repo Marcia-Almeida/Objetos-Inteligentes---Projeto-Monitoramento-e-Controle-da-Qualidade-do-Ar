@@ -1,0 +1,159 @@
+[
+    {
+        "id": "0dcf14e145f7758d",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a88a8d0c7a8607cd",
+        "type": "mqtt in",
+        "z": "0dcf14e145f7758d",
+        "name": "Leitura PPM (WOKWI)",
+        "topic": " mackenzie/air_quality/ppm",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "74522f504ea0772d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "435745d935f36a3b"
+            ]
+        ]
+    },
+    {
+        "id": "435745d935f36a3b",
+        "type": "ui_gauge",
+        "z": "0dcf14e145f7758d",
+        "name": "",
+        "group": "9adcb93f8aa1da39",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Qualidade do Ar (PPM)",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100",
+        "seg2": "200",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7976a7b0b75fcbf4",
+        "type": "ui_switch",
+        "z": "0dcf14e145f7758d",
+        "name": "",
+        "label": "Controle Manual do Exaustor",
+        "tooltip": "",
+        "group": "44cc051230483a13",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74522f504ea0772d",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public Broker",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9adcb93f8aa1da39",
+        "type": "ui_group",
+        "name": "Dados do Sensor",
+        "tab": "daeda0fb9c023090",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "44cc051230483a13",
+        "type": "ui_group",
+        "name": "([Monitoramento do Ar] Dados do Sensor)",
+        "tab": "",
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "daeda0fb9c023090",
+        "type": "ui_tab",
+        "name": "Monitoramento do Ar ",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "55ceaef0c70f46d4",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
