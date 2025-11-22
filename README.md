@@ -24,7 +24,10 @@ A comunicação entre o ESP32 (Simulação) e o Node-RED (Dashboard) ocorre via 
 * **Tópico de Dados:** `qualidadear/dados` (Publicação do valor de poluentes pelo ESP32).
 * **Tópico de Controle:** `qualidadear/controle` (Comando Ligar/Desligar enviado pelo Node-RED).
 
-##  Arquivos do Projeto (A Serem Inseridos)
+##  Arquivos do Projeto 
+codigo: sketch.ino + diagram.json
+fluxo-nodred: flow.json
+artigo do projeto
 
 ## Hardware Utilizado (Simulação)
 
