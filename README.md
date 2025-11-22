@@ -13,11 +13,11 @@ O sistema utiliza:
 * **Protocolo:** MQTT (para comunicação em tempo real).
 * **Interface:** Node-RED Dashboard.
 
-## ⚠️ Nota de Implementação (Simulação)
+## Nota de Implementação (Simulação)
 
-Devido a desafios logísticos, a demonstração e os testes de comunicação **MQTT** foram realizados por meio da **Simulação Tinkercad Circuits**, replicando o comportamento do hardware e garantindo a funcionalidade de controle e monitoramento.
+Devido a desafios logísticos, a demonstração e os testes de comunicação **MQTT** foram realizados por meio da **Simulação WOKWI**, replicando o comportamento do hardware e garantindo a funcionalidade de controle e monitoramento.
 
-## 🔌 Tópicos MQTT Utilizados
+##  Tópicos MQTT Utilizados
 
 A comunicação entre o ESP32 (Simulação) e o Node-RED (Dashboard) ocorre via Broker `broker.mqtt-dashboard.com` (Porta 1883) nos seguintes tópicos:
 
@@ -26,8 +26,37 @@ A comunicação entre o ESP32 (Simulação) e o Node-RED (Dashboard) ocorre via 
 
 ##  Arquivos do Projeto (A Serem Inseridos)
 
-Esta seção será preenchida após a conclusão das etapas técnicas.
+## Hardware Utilizado (Simulação)
 
-1.  **Código Fonte ESP32:** [Link para a pasta Codigo_ESP32/ com o arquivo .ino]
-2.  **Fluxo do Node-RED:** [Link para o arquivo .json do fluxo]
-3.  **Link da Simulação:** [Link público para o projeto no Tinkercad]
+*   **Microcontrolador:** ESP32 DevKit v1
+*   **Sensor:** Potenciômetro (simulando o sensor de gás MQ-135)
+*   **Atuador:** LED (simulando um módulo relé que aciona um exaustor)
+
+## Software e Plataformas
+
+*   **Simulador de Hardware:** [Wokwi](https://wokwi.com/ )
+*   **Broker MQTT e Dashboard:** [Node-RED](https://nodered.org/ )
+*   **Firmware IDE:** Arduino IDE
+
+## Como Reproduzir o Projeto
+
+1.  **Firmware (Wokwi):**
+    *   Acesse o Wokwi.
+    *   Crie um novo projeto com um ESP32.
+    *   Substitua os arquivos `sketch.ino` e `diagram.json` pelos arquivos contidos na pasta `codigo-firmware` deste repositório.
+    *   Na aba `wifi.json`, configure o SSID e a senha da sua rede Wi-Fi.
+
+2.  **Fluxo (Node-RED):**
+    *   Instale o Node-RED em sua máquina.
+    *   Vá para o menu (canto superior direito) -> Importar.
+    *   Copie e cole o conteúdo do arquivo `flow.json` (da pasta `fluxo-nodered`) e importe o fluxo.
+    *   Clique em "Deploy".
+
+3.  **Execução:**
+    *   Inicie a simulação no Wokwi.
+    *   Acesse o dashboard do Node-RED em `http://localhost:1880/ui`.
+    *   O sistema estará funcionando.
+
+## Documentação
+
+A documentação completa do projeto, incluindo o artigo acadêmico, pode ser encontrada na pasta `documentacao`.
