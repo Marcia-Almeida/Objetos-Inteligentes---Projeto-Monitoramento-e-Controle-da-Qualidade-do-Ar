@@ -44,7 +44,7 @@ artigo do projeto
 ## Como Reproduzir o Projeto
 
 1.  **Firmware (Wokwi):**
-    *   Acesse o Wokwi.
+    *   Acesse o Wokwi.com
     *   Crie um novo projeto com um ESP32.
     *   Substitua os arquivos `sketch.ino` e `diagram.json` pelos arquivos contidos na pasta `codigo-firmware` deste repositório.
     *   Na aba `wifi.json`, configure o SSID e a senha da sua rede Wi-Fi.
