@@ -62,4 +62,4 @@ artigo do projeto
 
 ## Documentação
 
-A documentação completa do projeto, incluindo o artigo acadêmico, pode ser encontrada na pasta `documentacao`.
+A documentação completa do projeto, incluindo o artigo acadêmico, pode ser encontrada na lista de arquivos.
