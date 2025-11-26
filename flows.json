@@ -1,0 +1,304 @@
+[
+    {
+        "id": "0ccdfa6b9564f1bc",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0dcf14e145f7758d",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "74522f504ea0772d",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public Broker",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "daeda0fb9c023090",
+        "type": "ui_tab",
+        "name": "Monitoramento do Ar ",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9adcb93f8aa1da39",
+        "type": "ui_group",
+        "name": "Dados do Sensor",
+        "tab": "daeda0fb9c023090",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fa3c5fa04886517e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "44cc051230483a13",
+        "type": "ui_group",
+        "name": "([Monitoramento do Ar] Dados do Sensor)",
+        "tab": "daeda0fb9c023090",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a88a8d0c7a8607cd",
+        "type": "mqtt in",
+        "z": "0dcf14e145f7758d",
+        "name": "Leitura PPM (WOKWI)",
+        "topic": "mackenzie/air_quality/ppm",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "74522f504ea0772d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "c491a67eaa831db3"
+            ]
+        ]
+    },
+    {
+        "id": "435745d935f36a3b",
+        "type": "ui_gauge",
+        "z": "0dcf14e145f7758d",
+        "name": "",
+        "group": "9adcb93f8aa1da39",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Qualidade do Ar (PPM)",
+        "label": "PPM",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "100",
+        "seg2": "200",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7976a7b0b75fcbf4",
+        "type": "ui_switch",
+        "z": "0dcf14e145f7758d",
+        "name": "",
+        "label": "Controle Manual do Exaustor",
+        "tooltip": "",
+        "group": "9adcb93f8aa1da39",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "518a616a47b57e7c",
+        "type": "debug",
+        "z": "0dcf14e145f7758d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c491a67eaa831db3",
+        "type": "function",
+        "z": "0dcf14e145f7758d",
+        "name": "function 1",
+        "func": "// Function Node: converte msg.payload (PPM) em:\n// saída 0 -> número para gauge\n// saída 1 -> texto de status para ui_text / debug\n// saída 2 -> null (não enviamos atuador por enquanto)\n\nvar ppm = Number(msg.payload);\nif (isNaN(ppm)) {\n    ppm = Number(msg.payload.payload || msg.payload.value || 0);\n}\n\n// Ajuste os limites para ficar igual ao ESP32\nvar lim1 = 150;  // até aqui: OK (verde)  — corresponde a threshold_ppm do ESP32\nvar lim2 = 300;  // entre lim1 e lim2: RUIM (amarelo)\n// acima de lim2 -> MUITO RUIM (vermelho)\n\nvar statusText = \"\";\n\nif (ppm <= lim1) {\n    statusText = \"Qualidade do ar OK\";\n} else if (ppm > lim1 && ppm <= lim2) {\n    statusText = \"ALERTA: Qualidade do ar RUIM\";\n} else {\n    statusText = \"ALERTA: Qualidade do ar MUITO RUIM\";\n}\n\n// mensagem para gauge (número)\nvar msgGauge = { payload: ppm };\n// mensagem texto para ui_text/debug\nvar msgText = { payload: statusText };\n\n// terceira saída = null (não enviar comando automático agora)\nreturn [msgGauge, msgText, null];\n",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 60,
+        "wires": [
+            [
+                "435745d935f36a3b"
+            ],
+            [
+                "518a616a47b57e7c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2e710a4b85f25961",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
